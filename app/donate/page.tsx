@@ -5,7 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
@@ -67,7 +67,7 @@ export default function DonatePage() {
                   <div>
                     <h3 className="font-medium">Support Community Outreach</h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Help us provide food, clothing, and support to those in need in our community.
+                      Supporting us also supports global mission-minded young people, who participate in evangelistic efforts, mission trips, and local outreach, actively fulfilling the Great Commission and making a real difference.
                     </p>
                   </div>
                 </div>
@@ -78,7 +78,7 @@ export default function DonatePage() {
                   <div>
                     <h3 className="font-medium">Youth Programs</h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Fund educational and spiritual development programs for children and young adults.
+                      Your donation helps nurture young people in their faith, providing Bible-based programs, mentorship, and character-building activities that guide them to become Christ-centered leaders in their churches and communities.
                     </p>
                   </div>
                 </div>
@@ -89,42 +89,10 @@ export default function DonatePage() {
                   <div>
                     <h3 className="font-medium">Facility Maintenance</h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Help us maintain and improve our facilities to better serve our community.
+                      Help us maintain and improve our facilities so we can continue to be a safe, welcoming space where young people can grow spiritually, build lifelong friendships, and develop valuable life skills.
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div>
-              <h2 className="mb-4 text-2xl font-bold">Our Impact</h2>
-              <div className="grid gap-4 sm:grid-cols-3">
-                <Card>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-4xl font-bold text-blue-600 dark:text-blue-400">1,200+</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Meals provided to those in need last year
-                    </p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-4xl font-bold text-blue-600 dark:text-blue-400">50+</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Youth supported through our programs</p>
-                  </CardContent>
-                </Card>
-                <Card>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-4xl font-bold text-blue-600 dark:text-blue-400">24</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Community events hosted annually</p>
-                  </CardContent>
-                </Card>
               </div>
             </div>
 
@@ -160,7 +128,7 @@ export default function DonatePage() {
                           className={cn(
                             "flex items-center justify-center rounded-md border border-gray-200 p-3 dark:border-gray-800",
                             donationAmount === amount &&
-                              "border-blue-600 bg-blue-50 dark:border-blue-400 dark:bg-blue-950/30",
+                            "border-blue-600 bg-blue-50 dark:border-blue-400 dark:bg-blue-950/30",
                           )}
                         >
                           <RadioGroupItem value={amount} id={`amount-${amount}`} className="sr-only" />
@@ -202,7 +170,7 @@ export default function DonatePage() {
                         className={cn(
                           "flex items-center rounded-md border border-gray-200 p-3 dark:border-gray-800",
                           paymentMethod === "card" &&
-                            "border-blue-600 bg-blue-50 dark:border-blue-400 dark:bg-blue-950/30",
+                          "border-blue-600 bg-blue-50 dark:border-blue-400 dark:bg-blue-950/30",
                         )}
                       >
                         <RadioGroupItem value="card" id="payment-card" />
@@ -215,7 +183,7 @@ export default function DonatePage() {
                         className={cn(
                           "flex items-center rounded-md border border-gray-200 p-3 dark:border-gray-800",
                           paymentMethod === "paypal" &&
-                            "border-blue-600 bg-blue-50 dark:border-blue-400 dark:bg-blue-950/30",
+                          "border-blue-600 bg-blue-50 dark:border-blue-400 dark:bg-blue-950/30",
                         )}
                       >
                         <RadioGroupItem value="paypal" id="payment-paypal" />
@@ -268,10 +236,6 @@ export default function DonatePage() {
                   </Button>
                 </form>
               </CardContent>
-              <CardFooter className="flex flex-col text-center text-sm text-gray-500 dark:text-gray-400">
-                <p>Your donation is tax-deductible to the extent allowed by law.</p>
-                <p>ADFEL is a registered 501(c)(3) non-profit organization.</p>
-              </CardFooter>
             </Card>
           </div>
         </div>

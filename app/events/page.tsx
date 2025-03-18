@@ -3,93 +3,85 @@
 import { useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CalendarDays, Clock, MapPin, Search } from "lucide-react"
 
-// Sample event data
+// implemnt google map api 
+
 const events = [
   {
     id: 1,
-    title: "Weekly Prayer Meeting",
+    title: "Genfel",
     description: "Join us for a time of prayer and fellowship as we lift up our community and world.",
-    date: "Every Wednesday",
-    time: "7:00 PM - 8:30 PM",
-    location: "ADFEL Community Center",
-    address: "123 Faith Avenue, Hopeville, CA 90210",
-    coordinates: { lat: 34.052235, lng: -118.243683 },
+    time: "7:00 PM - 9:00 PM",
+    location: "SLT-1",
+    address: "Sci-tech, UWI Mona",
     image: "/placeholder.svg?height=200&width=400",
-    category: "prayer",
+    category: "fellowship",
   },
   {
     id: 2,
-    title: "Community Service Day",
+    title: "Annual Blue Mountain Hike",
     description: "Volunteer with us as we serve our local community through various outreach projects.",
-    date: "June 15, 2025",
-    time: "9:00 AM - 2:00 PM",
-    location: "City Park",
-    address: "456 Community Lane, Hopeville, CA 90210",
-    coordinates: { lat: 34.053235, lng: -118.253683 },
+    date: "To be announce",
+    time: "To be announce",
+    location: "To be announce",
+    address: "To be announce",
     image: "/placeholder.svg?height=200&width=400",
-    category: "service",
+    category: "retreat",
   },
   {
     id: 3,
-    title: "Annual Spiritual Retreat",
+    title: "Annual Retreat",
     description: "A weekend of spiritual renewal, fellowship, and growth in a beautiful mountain setting.",
-    date: "July 20-22, 2025",
-    time: "Begins Friday 6:00 PM",
-    location: "Mountain View Retreat Center",
-    address: "789 Mountain Road, Pine Valley, CA 92062",
-    coordinates: { lat: 34.054235, lng: -118.263683 },
+    date: "To be announce",
+    time: "To be announce",
+    location: "To be announce",
+    address: "To be announce",
     image: "/placeholder.svg?height=200&width=400",
     category: "retreat",
   },
   {
     id: 4,
-    title: "Youth Bible Study",
+    title: "Singspiration",
     description: "A special Bible study series for young adults focusing on faith in the modern world.",
-    date: "Every Friday",
-    time: "6:30 PM - 8:00 PM",
-    location: "ADFEL Youth Center",
-    address: "123 Faith Avenue, Hopeville, CA 90210",
-    coordinates: { lat: 34.052235, lng: -118.243683 },
+    date: "To be announce",
+    time: "To be announce",
+    location: "To be announce",
+    address: "To be announce",
     image: "/placeholder.svg?height=200&width=400",
-    category: "study",
+    category: "service",
   },
   {
     id: 5,
-    title: "Family Fellowship Potluck",
+    title: "Chapel Weekend",
     description: "Bring your favorite dish and join us for food, fellowship, and fun for the whole family.",
-    date: "Last Sunday of each month",
-    time: "  fellowship, and fun for the whole family.",
-    date: "Last Sunday of each month",
-    time: "12:00 PM - 2:00 PM",
-    location: "ADFEL Community Hall",
-    address: "123 Faith Avenue, Hopeville, CA 90210",
-    coordinates: { lat: 34.052235, lng: -118.243683 },
+    date: "To be announce",
+    time: "To be announce",
+    location: "To be announce",
+    address: "To be announce",
     image: "/placeholder.svg?height=200&width=400",
-    category: "fellowship",
+    category: "service",
   },
   {
     id: 6,
-    title: "Health & Wellness Seminar",
+    title: "All Night Prayer & Fasting",
     description: "Learn about holistic health principles and practical wellness strategies for abundant living.",
-    date: "June 30, 2025",
-    time: "10:00 AM - 12:00 PM",
-    location: "ADFEL Community Center",
-    address: "123 Faith Avenue, Hopeville, CA 90210",
-    coordinates: { lat: 34.052235, lng: -118.243683 },
+    date: "To be announce",
+    time: "To be announce",
+    location: "To be announce",
+    address: "To be announce",
     image: "/placeholder.svg?height=200&width=400",
-    category: "health",
+    category: "prayer",
   },
 ]
 
 export default function EventsPage() {
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("all")
-  const [selectedEvent, setSelectedEvent] = useState<(typeof events)[0] | null>(null)
+  const [setSelectedEvent] = useState<(typeof events)[0] | null>(null)
 
   // Filter events based on search term and category
   const filteredEvents = events.filter((event) => {
@@ -132,7 +124,7 @@ export default function EventsPage() {
                 <TabsTrigger value="all">All</TabsTrigger>
                 <TabsTrigger value="prayer">Prayer</TabsTrigger>
                 <TabsTrigger value="service">Service</TabsTrigger>
-                <TabsTrigger value="study">Study</TabsTrigger>
+                <TabsTrigger value="retreat">Retreat</TabsTrigger>
                 <TabsTrigger value="fellowship">Fellowship</TabsTrigger>
               </TabsList>
             </Tabs>
@@ -168,11 +160,6 @@ export default function EventsPage() {
                 <CardContent>
                   <p className="line-clamp-3 text-sm text-gray-500 dark:text-gray-400">{event.description}</p>
                 </CardContent>
-                <CardFooter>
-                  <Button variant="outline" className="w-full" onClick={() => setSelectedEvent(event)}>
-                    View Details
-                  </Button>
-                </CardFooter>
               </Card>
             ))}
           </div>
@@ -195,86 +182,6 @@ export default function EventsPage() {
             </div>
           )}
         </div>
-
-        {/* Event Details Modal */}
-        {selectedEvent && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-            <div className="max-h-[90vh] w-full max-w-3xl overflow-auto rounded-lg bg-white p-6 shadow-lg dark:bg-gray-950">
-              <div className="mb-4 flex items-center justify-between">
-                <h2 className="text-2xl font-bold">{selectedEvent.title}</h2>
-                <Button variant="ghost" size="icon" onClick={() => setSelectedEvent(null)}>
-                  <span className="sr-only">Close</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-6 w-6"
-                  >
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                  </svg>
-                </Button>
-              </div>
-              <div className="grid gap-6 md:grid-cols-2">
-                <div>
-                  <Image
-                    src={selectedEvent.image || "/placeholder.svg"}
-                    alt={selectedEvent.title}
-                    width={500}
-                    height={300}
-                    className="rounded-lg object-cover"
-                  />
-                  <div className="mt-4 space-y-2">
-                    <div className="flex items-center text-gray-500 dark:text-gray-400">
-                      <CalendarDays className="mr-2 h-5 w-5" />
-                      <span>{selectedEvent.date}</span>
-                    </div>
-                    <div className="flex items-center text-gray-500 dark:text-gray-400">
-                      <Clock className="mr-2 h-5 w-5" />
-                      <span>{selectedEvent.time}</span>
-                    </div>
-                    <div className="flex items-center text-gray-500 dark:text-gray-400">
-                      <MapPin className="mr-2 h-5 w-5" />
-                      <span>{selectedEvent.location}</span>
-                    </div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{selectedEvent.address}</p>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="text-lg font-medium">About this event</h3>
-                    <p className="mt-2 text-gray-500 dark:text-gray-400">{selectedEvent.description}</p>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium">Location</h3>
-                    <div className="mt-2 h-[200px] rounded-lg bg-gray-100 dark:bg-gray-800">
-                      {/* Google Maps would be integrated here in a real application */}
-                      <div className="flex h-full items-center justify-center">
-                        <p className="text-center text-sm text-gray-500 dark:text-gray-400">
-                          Google Maps integration would display the location here.
-                          <br />
-                          {selectedEvent.address}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex gap-2">
-                    <Button className="flex-1">Register</Button>
-                    <Button variant="outline" className="flex-1">
-                      Add to Calendar
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   )

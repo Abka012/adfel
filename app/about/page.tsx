@@ -97,44 +97,26 @@ export default function AboutPage() {
                   Our dedicated leadership team brings diverse experiences and a shared commitment to serving our
                   community.
                 </p>
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="grid gap-3 sm:grid-cols-1 lg:grid-cols-3">
                   {[
                     {
-                      name: "Pastor John Smith",
-                      role: "Spiritual Director",
-                      bio: "Pastor John has served our community for over 15 years with wisdom and compassion.",
+                      name: "Raniel Smith",
+                      role: "ADFEL President",
+                      bio: "Short bio",
                       image: "/placeholder.svg?height=300&width=300",
                     },
                     {
-                      name: "Sarah Johnson",
-                      role: "Community Outreach Coordinator",
-                      bio: "Sarah leads our service initiatives with creativity and a heart for those in need.",
+                      name: "Danielle Lewis",
+                      role: "UWI Campus President",
+                      bio: "Short bio",
                       image: "/placeholder.svg?height=300&width=300",
                     },
                     {
-                      name: "Michael Chen",
-                      role: "Youth Ministries Leader",
-                      bio: "Michael is passionate about empowering young people to grow in their faith journey.",
+                      name: "Alexander Rose",
+                      role: "UTECH Campus President",
+                      bio: "Short bio",
                       image: "/placeholder.svg?height=300&width=300",
-                    },
-                    {
-                      name: "Rebecca Williams",
-                      role: "Treasurer",
-                      bio: "Rebecca brings financial expertise and stewardship to our organization's resources.",
-                      image: "/placeholder.svg?height=300&width=300",
-                    },
-                    {
-                      name: "David Rodriguez",
-                      role: "Events Coordinator",
-                      bio: "David creates meaningful gatherings that strengthen our community bonds.",
-                      image: "/placeholder.svg?height=300&width=300",
-                    },
-                    {
-                      name: "Grace Kim",
-                      role: "Secretary",
-                      bio: "Grace ensures our operations run smoothly with attention to detail and care.",
-                      image: "/placeholder.svg?height=300&width=300",
-                    },
+                    }
                   ].map((leader, index) => (
                     <Card key={index}>
                       <CardContent className="p-6">

@@ -47,64 +47,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Announcements Section */}
-      <section className="w-full py-12 md:py-16 lg:py-20">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Announcements</h2>
-              <p className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
-                Stay updated with the latest news and events from our community.
-              </p>
-            </div>
-          </div>
-          <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
-            {[
-              {
-                title: "Weekly Prayer Meeting",
-                description: "Join us every Wednesday at 7 PM for our community prayer session.",
-                date: "Every Wednesday",
-              },
-              {
-                title: "Community Service Day",
-                description: "Volunteer with us as we serve our local community next weekend.",
-                date: "June 15, 2025",
-              },
-              {
-                title: "Annual Retreat Registration",
-                description: "Registration for our annual spiritual retreat is now open.",
-                date: "Registration closes July 1",
-              },
-            ].map((announcement, index) => (
-              <Card key={index} className="border-blue-100 dark:border-gray-800">
-                <CardHeader>
-                  <CardTitle>{announcement.title}</CardTitle>
-                  <CardDescription>
-                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
-                      <CalendarDays className="mr-1 h-4 w-4" />
-                      {announcement.date}
-                    </div>
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p>{announcement.description}</p>
-                </CardContent>
-                <CardFooter>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="text-blue-600 hover:text-blue-700 hover:bg-blue-50 dark:text-blue-400 dark:hover:bg-gray-800"
-                  >
-                    Learn more
-                    <ChevronRight className="ml-1 h-4 w-4" />
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Mission Section */}
       <section className="w-full py-12 md:py-16 lg:py-20 bg-blue-50 dark:bg-gray-900">
         <div className="container px-4 md:px-6">
@@ -164,12 +106,12 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Link href="/events">
+              <Link href="/about">
                 <Button
                   variant="outline"
                   className="border-blue-200 hover:bg-blue-50 dark:border-gray-700 dark:hover:bg-gray-800"
                 >
-                  View Upcoming Events
+                  Learn more about ADFEL
                 </Button>
               </Link>
             </div>
