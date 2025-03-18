@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <header className="bg-white dark:bg-gray-950 sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800">
-      <div className="container flex h-16 items-center px-4 sm:px-6 lg:px-8">
+      <div className="container flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2">
             <span className="text-xl font-bold text-blue-600 dark:text-blue-400">ADFEL</span>
@@ -42,6 +42,29 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+
+        {/* Mobile menu button */}
+        <button
+          type="button"
+          className="md:hidden -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-300"
+          onClick={() => setMobileMenuOpen(true)}
+        >
+          <span className="sr-only">Open main menu</span>
+          <svg
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
       </div>
 
       {/* Mobile menu */}
@@ -58,7 +81,20 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
-                <X className="h-6 w-6" aria-hidden="true" />
+                <svg
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
               </button>
             </div>
             <div className="mt-6 flow-root">
@@ -88,4 +124,3 @@ export default function Header() {
     </header>
   )
 }
-
