@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
+import CustomTypingEffect from "./ui/typing-effect"
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -19,10 +20,10 @@ export default function Header() {
   return (
     <header className="bg-white dark:bg-gray-950 sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800">
       <div className="container flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center">
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold text-blue-600 dark:text-blue-400">ADFEL</span>
-          </Link>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+          <h1>
+            <CustomTypingEffect />
+          </h1>
         </div>
 
         {/* Desktop navigation */}
