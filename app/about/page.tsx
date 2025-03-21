@@ -30,15 +30,13 @@ export default function AboutPage() {
             <div>
               <h2 className="text-2xl font-bold">Our Story</h2>
               <p className="mt-2 text-gray-500 dark:text-gray-400">
-                ADFEL (Adventist Fellowship) was founded in 1985 by a small group of dedicated Seventh-day Adventist
-                members who saw the need for a community organization focused on fellowship, service, and spiritual
-                growth. What began as a small gathering has grown into a vibrant community with hundreds of active
-                members and alumni.
+                Paragraph 1
               </p>
               <p className="mt-4 text-gray-500 dark:text-gray-400">
-                Over the decades, we have remained committed to our founding principles while adapting to meet the
-                changing needs of our community. Today, ADFEL continues to be a place where people can connect, grow in
-                their faith, and make a positive impact in the world.
+                Parahraph 2
+              </p>
+              <p className="mt-4 text-gray-500 dark:text-gray-400">
+                Parahraph 3
               </p>
             </div>
             <div>
@@ -146,50 +144,45 @@ export default function AboutPage() {
                   <div className="relative border-l border-gray-200 dark:border-gray-800 pl-8 ml-4">
                     <div className="absolute w-4 h-4 bg-blue-600 rounded-full -left-2 top-1 dark:bg-blue-400"></div>
                     <div>
-                      <h3 className="text-lg font-bold">1985: Foundation</h3>
+                      <h3 className="text-lg font-bold">YEAR: START</h3>
                       <p className="mt-2 text-gray-500 dark:text-gray-400">
-                        ADFEL was founded by a group of 12 Seventh-day Adventist members who wanted to create a space
-                        for fellowship and community service.
+                        placeholder
                       </p>
                     </div>
                   </div>
                   <div className="relative border-l border-gray-200 dark:border-gray-800 pl-8 ml-4">
                     <div className="absolute w-4 h-4 bg-blue-600 rounded-full -left-2 top-1 dark:bg-blue-400"></div>
                     <div>
-                      <h3 className="text-lg font-bold">1990: Growth and Expansion</h3>
+                      <h3 className="text-lg font-bold">YEAR: MILESTONE</h3>
                       <p className="mt-2 text-gray-500 dark:text-gray-400">
-                        The organization expanded its programs to include youth ministries and community outreach
-                        initiatives, growing to over 50 active members.
+                        placeholder
                       </p>
                     </div>
                   </div>
                   <div className="relative border-l border-gray-200 dark:border-gray-800 pl-8 ml-4">
                     <div className="absolute w-4 h-4 bg-blue-600 rounded-full -left-2 top-1 dark:bg-blue-400"></div>
                     <div>
-                      <h3 className="text-lg font-bold">2000: New Community Center</h3>
+                      <h3 className="text-lg font-bold">YEAR: MILESTONE</h3>
                       <p className="mt-2 text-gray-500 dark:text-gray-400">
-                        ADFEL opened its first dedicated community center, providing a permanent home for meetings,
-                        events, and service programs.
+                        placeholder
                       </p>
                     </div>
                   </div>
                   <div className="relative border-l border-gray-200 dark:border-gray-800 pl-8 ml-4">
                     <div className="absolute w-4 h-4 bg-blue-600 rounded-full -left-2 top-1 dark:bg-blue-400"></div>
                     <div>
-                      <h3 className="text-lg font-bold">2010: 25th Anniversary</h3>
+                      <h3 className="text-lg font-bold">YEAR: MILESTONE</h3>
                       <p className="mt-2 text-gray-500 dark:text-gray-400">
-                        ADFEL celebrated 25 years of service with a special anniversary event and the launch of a
-                        scholarship program for young members.
+                        placeholder
                       </p>
                     </div>
                   </div>
                   <div className="relative border-l border-gray-200 dark:border-gray-800 pl-8 ml-4">
                     <div className="absolute w-4 h-4 bg-blue-600 rounded-full -left-2 top-1 dark:bg-blue-400"></div>
                     <div>
-                      <h3 className="text-lg font-bold">Present Day</h3>
+                      <h3 className="text-lg font-bold">YEAR: MILESTONE</h3>
                       <p className="mt-2 text-gray-500 dark:text-gray-400">
-                        Today, ADFEL continues to grow and adapt, serving hundreds of members and reaching thousands in
-                        our community through various programs and initiatives.
+                        placeholder
                       </p>
                     </div>
                   </div>
@@ -242,10 +235,19 @@ export default function AboutPage() {
                     </Card>
                   ))}
                 </div>
-                <div className="text-center mt-8">
+                <div className="text-center mt-8 ">
                   <p className="text-gray-500 dark:text-gray-400">
-                    For a complete statement of Seventh-day Adventist beliefs, please visit the official church website.
+                    For a complete statement of Seventh-day Adventist beliefs.
                   </p>
+                  <div className="mt-6 flex flex-col gap-4 sm:flex-row justify-center">
+                    <a href="https://www.adventist.org/" target="_blank" rel="noopener noreferrer">
+                      <Button
+                        className="bg-blue-600 hover:bg-blue-700"
+                      >
+                        Visit the Official Church Website
+                      </Button>
+                    </a>
+                  </div>
                 </div>
               </div>
             </TabsContent>

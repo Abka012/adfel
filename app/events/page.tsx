@@ -15,6 +15,7 @@ const events = [
     id: 1,
     title: "Genfel",
     description: "Join us for a time of prayer and fellowship as we lift up our community and world.",
+    date: "Every Friday",
     time: "7:00 PM - 9:00 PM",
     location: "SLT-1",
     address: "Sci-tech, UWI Mona",

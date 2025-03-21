@@ -14,7 +14,6 @@ export default function Header() {
     { name: "Events", href: "/events" },
     { name: "Donate", href: "/donate" },
     { name: "About", href: "/about" },
-    { name: "Login", href: "/login" }
   ]
 
   return (
