@@ -6,7 +6,7 @@ const CustomTypingEffect: React.FC = () => {
   const [loopNum, setLoopNum] = useState<number>(0);
   const [typingSpeed, setTypingSpeed] = useState<number>(150);
 
-  const words: string[] = ['Welcome to Advent Fellowship', 'Your Home Away From Home'];
+  const words: string[] = ['Welcome', 'To', 'Advent Fellowship!!!'];
   const currentWord: string = words[loopNum % words.length];
 
   useEffect(() => {
