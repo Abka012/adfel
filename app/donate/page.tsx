@@ -183,7 +183,7 @@ function PayPalCheckout({ amount, customAmount, donationFrequency }: {
     try {
       // In a real application, you would redirect to PayPal or use their SDK
       // This is a simplified example that would be replaced with actual PayPal integration
-      const response = await fetch("/api/create-payment", {
+      const response = await fetch("/api/create-paypal-order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
